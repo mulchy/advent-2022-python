@@ -547,7 +547,7 @@ def initialize():
 
     for stack in stacks:
         stack.reverse()
-    
+
     return stacks, instructions
 
 def solve(stacks, instructions, move_multiple=False):
@@ -564,7 +564,7 @@ def solve(stacks, instructions, move_multiple=False):
             else:
                 for _ in range(n):
                     stacks[target].append(stacks[source].pop())
-                    
+
     answer = ""
     for stack in stacks:
         answer += stack.pop()

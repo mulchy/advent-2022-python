@@ -314,7 +314,7 @@ priorities = { k: v for (v, k) in enumerate(alphabet, 1)}
 total = 0
 for line in input.splitlines():
     mid = floor(len(line)/2)
-    first_half = set(line[:mid]) 
+    first_half = set(line[:mid])
     second_half = set(line[mid:])
 
     dupe = list(first_half.intersection(second_half))[0] # assume only one dupe
