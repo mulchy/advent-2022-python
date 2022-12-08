@@ -4,13 +4,15 @@ from utils.io import read
 
 input = read()
 
-class File():
+
+class File:
     def __init__(self, name: str, size: int, parent: Directory) -> None:
         self.name = name
         self.size = size
         self.parent = parent
 
-class Directory():
+
+class Directory:
     def __init__(self, name: str, parent: Directory | None) -> None:
         self.name = name
         self.parent = parent
@@ -66,6 +68,8 @@ filesystem_size = 70000000
 free = filesystem_size - root.size
 needed = 30000000 - free
 
-candidates = sorted([dir for dir in directories if dir.size >= needed], key=lambda d: d.size)
+candidates = sorted(
+    [dir for dir in directories if dir.size >= needed], key=lambda d: d.size
+)
 
-print(candidates[0])
+print(candidates[0].size)

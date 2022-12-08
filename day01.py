@@ -1,6 +1,6 @@
 from utils.io import read
 
-elves = read().split('\n\n')
+elves = read().split("\n\n")
 
 calories = []
 for elf in elves:

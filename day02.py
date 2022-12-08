@@ -1,8 +1,4 @@
-shape_value = {
-    'X': 1,
-    'Y': 2,
-    'Z': 3
-}
+shape_value = {"X": 1, "Y": 2, "Z": 3}
 
 results = {
     "A X": 3,

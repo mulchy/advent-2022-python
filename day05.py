@@ -10,8 +10,11 @@ movement_regex = r"move (?P<n>\d+) from (?P<source>\d+) to (?P<target>\d+)"
 # 0123456789
 # fixed width, every fourth is contents
 
+
 def initialize():
-    initial_configuration, columns, instructions = split(colunn_label_regex, input, maxsplit=1, flags=MULTILINE)
+    initial_configuration, columns, instructions = split(
+        colunn_label_regex, input, maxsplit=1, flags=MULTILINE
+    )
     columns = int(columns)
     instructions = instructions.strip()
 
@@ -28,6 +31,7 @@ def initialize():
         stack.reverse()
 
     return stacks, instructions
+
 
 def solve(stacks, instructions, move_multiple=False):
     for line in instructions.splitlines():
@@ -49,6 +53,7 @@ def solve(stacks, instructions, move_multiple=False):
         answer += stack.pop()
 
     return answer
+
 
 stacks, instructions = initialize()
 print(solve(stacks, instructions))
